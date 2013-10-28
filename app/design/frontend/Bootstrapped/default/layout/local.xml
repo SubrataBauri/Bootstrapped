@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @category design
+* @package Bootstrapped
+*/
+-->
+
+<layout>
+    <!-- Global Operations -->
+    <default>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+       <!-- Add js/css globally -->
+        <reference name="head">
+			<!-- JS -->
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery/jquery-1.10.2.min.js</name>
+				<params/><if>lt IE 9</if>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery/jquery-2.0.3.min.js</name>
+				<params/><if>gt IE 8</if>
+			</action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/bootstrap/bootstrap.min.js</script>
+            </action>
+			<!-- CSS -->
+			
+        </reference>
+        <!-- //Add js/css globally -->
+    </default>
+
+</layout>
