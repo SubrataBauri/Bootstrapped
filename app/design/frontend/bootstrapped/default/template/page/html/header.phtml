@@ -28,34 +28,37 @@
  */
 ?>
 <header>
-	<div class="row">
-        <div class="col-md-5">
+    <div class="row">
+        <div class="col-md-10">
             <div class="welcome-msg">
                 <p><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <?php echo $this->getChildHtml('store_language') ?>
         </div>
-        <div class="col-md-4">
-            <?php echo $this->getChildHtml('topSearch') ?>
-        </div>
+
     </div>
     <div class="row">
-        <?php if ($this->getIsHomePage()):?>
-        <h1 class="col-md-4 logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-        <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="col-md-4 logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-        <?php endif?>
-        <div class="col-md-8 quick-access">
-        <div class="dropdown">
-          <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-            Your Account
-            <b class="caret"></b>
-          </a>
-          <?php echo $this->getChildHtml('topLinks') ?>
+        <div class="col-md-4">
+            <?php if ($this->getIsHomePage()): ?>
+                <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+            <?php else: ?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <?php endif ?>
+        </div>
+        <div class="col-md-2"></div>    
+        <div class="col-md-4">
+            <?php echo $this->getChildHtml('topSearch') ?>
         </div>    
-                
+        <div class="col-md-2 quick-access">
+            <div class="dropdown text-right">
+                <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+                    Your Account
+                    <b class="caret"></b>
+                </a>
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </div>    
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>

@@ -31,7 +31,7 @@
 ?>
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
-<ul class="dropdown-menu links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?> role="menu" aria-labelledby="dLabel">
+<ul class="dropdown-menu text-left links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?> role="menu" aria-labelledby="dLabel">
     <?php foreach($_links as $_link): ?>
         <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
             <?php echo $_link->toHtml() ?>
