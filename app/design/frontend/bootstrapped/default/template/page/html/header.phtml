@@ -28,21 +28,34 @@
  */
 ?>
 <header>
-<div class="header-container">
-    <div class="header">
+	<div class="row">
+        <div class="col-md-6">
+			<div class="welcome-msg">
+				<p><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
+			</div>
+        </div>
+		<div class="col-md-6">
+            
+			<?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+    </div>
+    <div class="row">
         <?php if ($this->getIsHomePage()):?>
-        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        <h1 class="col-md-4 logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="col-md-4 logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
-        <div class="quick-access">
-            <?php echo $this->getChildHtml('topSearch') ?>
-            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-            <?php echo $this->getChildHtml('topLinks') ?>
-            <?php echo $this->getChildHtml('store_language') ?>
+        <div class="col-md-8 quick-access">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-6">
+				<?php echo $this->getChildHtml('store_language') ?>
+            </div>
+			<div class="col-md-4">
+				<?php echo $this->getChildHtml('topLinks') ?>
+			</div
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
-</div>
 </header>
 <?php echo $this->getChildHtml('topMenu') ?>
