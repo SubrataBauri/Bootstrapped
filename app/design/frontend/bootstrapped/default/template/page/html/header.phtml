@@ -30,13 +30,15 @@
 <header>
 	<div class="row">
         <div class="col-md-6">
-			<div class="welcome-msg">
-				<p><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
-			</div>
+            <div class="welcome-msg">
+                <p><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
+            </div>
         </div>
-		<div class="col-md-6">
-            
-			<?php echo $this->getChildHtml('topSearch') ?>
+        <div class="col-md-6">
+            <?php echo $this->getChildHtml('store_language') ?>
+        </div>
+        <div class="col-md-6">
+            <?php echo $this->getChildHtml('topSearch') ?>
         </div>
     </div>
     <div class="row">
@@ -46,16 +48,21 @@
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="col-md-4 logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
         <div class="col-md-8 quick-access">
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-6">
-				<?php echo $this->getChildHtml('store_language') ?>
-            </div>
-			<div class="col-md-4">
-				<?php echo $this->getChildHtml('topLinks') ?>
-			</div
+        <div class="dropdown">
+          <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+            Your Account
+            <b class="caret"></b>
+          </a>
+          <?php echo $this->getChildHtml('topLinks') ?>
+        </div>    
+                
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
 </header>
 <?php echo $this->getChildHtml('topMenu') ?>
+<script>
+    $(document).ready(function(){
+        $('.dropdown-toggle').dropdown();
+    })
+</script>

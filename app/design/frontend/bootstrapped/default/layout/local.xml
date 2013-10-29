@@ -2,7 +2,7 @@
 <!--
 /**
 * @category design
-* @package Bootstrapped
+* @package bootstrapped
 */
 -->
 
@@ -16,22 +16,32 @@
         </reference>
        <!-- Add js/css globally -->
         <reference name="head">
-			<!-- JS -->
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery/jquery-1.10.2.min.js</name>
-				<params/><if>lt IE 9</if>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery/jquery-2.0.3.min.js</name>
-				<params/><if>gt IE 8</if>
-			</action>
+            <!-- JS -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/jquery-1.10.2.min.js</name>
+                <params/>
+                <if>lt IE 9</if>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/jquery-2.0.3.min.js</name>
+                <params/>
+                <if>gt IE 8</if>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/jquery-1.10.2.min.js</name>
+            </action>            
             <action method="addItem">
                 <type>skin_js</type>
                 <script>js/bootstrap/bootstrap.min.js</script>
             </action>
-			<!-- CSS -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/bootstrap/dropdown.js</script>
+            </action>
+	    <!-- CSS -->
             <action method="addItem">
                 <type>skin_css</type>
                 <script>css/normalize.css</script>
@@ -46,8 +56,9 @@
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <script>css/bootstrap-theme.min.css</script>
+                <script>css/styles.css</script>
             </action>
+
         </reference>
         <!-- //Add js/css globally -->
     </default>

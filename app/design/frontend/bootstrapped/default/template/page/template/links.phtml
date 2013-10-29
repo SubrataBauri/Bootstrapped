@@ -31,7 +31,7 @@
 ?>
 <?php $_links = $this->getLinks(); ?>
 <?php if(count($_links)>0): ?>
-<ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
+<ul class="dropdown-menu links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?> role="menu" aria-labelledby="dLabel">
     <?php foreach($_links as $_link): ?>
         <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
             <?php echo $_link->toHtml() ?>
@@ -41,16 +41,3 @@
     <?php endforeach; ?>
 </ul>
 <?php endif; ?>
-<ul class="nav nav-tabs">
-  <li class="dropdown">
-    <a class="dropdown-toggle"
-       data-toggle="dropdown"
-       href="#">
-        Dropdown
-        <b class="caret"></b>
-      </a>
-    <ul class="dropdown-menu">
-      <!-- links -->
-    </ul>
-  </li>
-</ul>
