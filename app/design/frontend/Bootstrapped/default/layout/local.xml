@@ -32,7 +32,22 @@
                 <script>js/bootstrap/bootstrap.min.js</script>
             </action>
 			<!-- CSS -->
-			
+            <action method="addItem">
+                <type>skin_css</type>
+                <script>css/normalize.css</script>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <script>css/bootstrap.min.css</script>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <script>css/bootstrap-theme.min.css</script>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <script>css/bootstrap-theme.min.css</script>
+            </action>
         </reference>
         <!-- //Add js/css globally -->
     </default>
