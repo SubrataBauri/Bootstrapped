@@ -50,10 +50,10 @@
                 <type>skin_css</type>
                 <script>css/bootstrap.min.css</script>
             </action>
-            <action method="addItem">
+            <!--action method="addItem">
                 <type>skin_css</type>
                 <script>css/bootstrap-theme.min.css</script>
-            </action>
+            </action-->
             <action method="addItem">
                 <type>skin_css</type>
                 <script>css/styles.css</script>
