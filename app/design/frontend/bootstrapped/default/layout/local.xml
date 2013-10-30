@@ -9,11 +9,11 @@
 <layout>
     <!-- Global Operations -->
     <default>
-        <reference name="root">
+        <!--reference name="root">
             <action method="setTemplate">
                 <template>page/2columns-left.phtml</template>
             </action>
-        </reference>
+        </reference-->
        <!-- Add js/css globally -->
         <reference name="head">
             <!-- JS -->
